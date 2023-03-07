@@ -6,11 +6,11 @@ from PIL import Image
 
 # Get the 8 most recent images in the downloads folder
 downloads_folder = '/Users/vecorkem/Downloads/'
-image_files = [f for f in os.listdir(downloads_folder) if f.endswith('.jpg')]
+image_files = [f for f in os.listdir(downloads_folder) if f.endswith('.jpg') or f.endswith('.JPG') or f.endswith('.PNG')]
 image_files.sort(key=lambda x: os.path.getctime(os.path.join(downloads_folder, x)))
 
 # change the number to match the count of all pairs
-recent_images = image_files[-8:]
+recent_images = image_files[-18:]
 
 
 # Create a new folder for the pairs in Download folder
